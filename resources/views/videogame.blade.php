@@ -7,14 +7,10 @@
   <body>
     <h1>Videogame List</h1>
 
-    @php
-      foreach ($videogame as $platform) {
-        foreach ($platform as $game) {
-          @endphp
-          <li> @php echo $game; @endphp </li>
-          @php
-        }
-      }
-    @endphp
+    <ul>
+      @foreach ($videogame as $game)
+        <li> {{$game->platform}} - {{$game->videogame}} </li>
+      @endforeach
+    </ul>
   </body>
 </html>
